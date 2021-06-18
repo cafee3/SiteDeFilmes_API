@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta author="João Pedro Mayrink" />
+    <title>Ripe Tomatoes | O seu portal de filmes nada original</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+  </head>
+
+  <body>
+    <header id="header" class="header">
+      <div class="container">
+        <div class="row">
+          <span class="col-5 col-sm-4 col-md-4 col-lg-2"
+            ><a href="./index.html"
+              ><img
+                class="logo"
+                src="res/logo-ripe-tomatoes.png"
+                alt="Logo Ripe Tomatoes" /></a
+          ></span>
+          <nav class="col-lg-7">
+            <input type="checkbox" id="menuToggle" />
+            <label for="menuToggle" class="menuIcon">
+              <i class="fas fa-bars"></i>
+              <i class="fas fa-times-circle"></i>
+            </label>
+            <ul class="menu">
+              <li class="nav-item">
+                <a class="nav-link active" href="#lancamento">lançamentos</a>
+              </li>
+              <span> | </span>
+              <li class="nav-item">
+                <a class="nav-link" href="#destaque">em destaque</a>
+              </li>
+              <span> | </span>
+              <li class="nav-item">
+                <a class="nav-link" href="#avaliacoes">avaliações</a>
+              </li>
+              <span> | </span>
+              <li class="nav-item">
+                <a class="nav-link" href="#making-of"
+                  >entrevistas e making-offs</a
+                >
+              </li>
+              <span> | </span>
+              <li class="nav-item">
+                <a class="nav-link" href="#informativo">novidades</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="dropdown col-3 col-sm-2 col-md-4 menuMobile">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bars fa-2x"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#lancamento">lançamentos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#destaque">em destaque</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#avaliacoes">avaliações</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#making-of"
+                >entrevistas e making-offs</a
+              >
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#informativo">novidades</a>
+            </div>
+          </div>
+
+          <div class="input-group mb-3 col-sm-6 col-md-4 col-lg-3 search-field">
+            <span
+              class="input-group-text icone-lupa"
+              id="basic-addon1"
+              onclick="pesquisaFilmes"
+            >
+              <i class="fas fa-search"></i>
+            </span>
+            <input
+              id="inputSearch"
+              type="text"
+              class="form-control"
+              placeholder="Pesquisar filme..."
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+            <span
+              class="input-group-text icone-close"
+              id="basic-addon2"
+              onclick="deletaCampoDePesquisa()">
+              <i class="far fa-times-circle"></i>
+            </span>
+          </div>
+          <div class="col-3 searchMobile">
+            <span class="icone-lupa" id="basic-addon1">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="resultados">
+        <h1 class="col-12 justify-content-center">Resultados da busca</h1>
+        <div id="lista_filmes" class="row">
+          <!--Aqui entrarão os resultados de pesquisa-->
+        </div>
+          <div class="col-12 d-flex justify-content-end">
+            <button type="button" class="btn btn-warning botao-mais-conteudo" onclick="maisFilmes(event)">
+            <i class="fas fa-plus"></i>
+            Carregar mais resultados
+          </button>
+        </div>
+    </section>
+
+    <section id="informativo" class="informativo container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-8">
+          <h3>Novidades</h3>
+          <div class="card mb-3 noticias" style="max-width: 600px">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="res/the-100.jpg" class="card-img" alt="The 100" />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    The 100: Final da série promove retornos de personagens
+                    amados
+                  </h5>
+                  <p class="card-text">
+                    Saiba o que aconteceu na despedida de Clarke (Eliza Taylor)
+                    e seus amigos.
+                  </p>
+                  <p class="card-text">
+                    <button class="tags">the-100</button>
+                    <button class="tags">netflix</button>
+                    <button class="tags">series-teen</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="card mb-3 noticias" style="max-width: 600px">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img
+                  src="res/the-walking-dead.jpg"
+                  class="card-img"
+                  alt="The Walking Dead"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    The Walking Dead: Final da 10ª temporada ganha data de
+                    estreia no Brasil
+                  </h5>
+                  <p class="card-text">
+                    O novo episódio da série de zumbis marca o retorno de Lauren
+                    Cohan para o papel de Maggie Greene.
+                  </p>
+                  <p class="card-text">
+                    <button class="tags">the-walking-dead</button>
+                    <button class="tags">estreia</button>
+                    <button class="tags">zumbis</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="card mb-3 noticias" style="max-width: 600px">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="res/zendaya.jpg" class="card-img" alt="Zendaya" />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Zendaya será protagonista de biografia sobre a cantora
+                    Ronnie Spector
+                  </h5>
+                  <p class="card-text">
+                    O longa vai ser produzido pelo estúdio A24, que também é
+                    responsável por Euphoria.
+                  </p>
+                  <p class="card-text">
+                    <button class="tags">zendaya</button>
+                    <button class="tags">euphoria</button>
+                    <button class="tags">biografia</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4">
+          <div class="row sobre">
+            <h3>Sobre</h3>
+            <p>
+              Esse Portal de Filmes foi desenvolvido com parte integrante da
+              obtenção de pontos da disciplina de Desenvolvimento de Interfaces
+              Web, do primeiro período do curso de Engenharia de Software da PUC
+              Minas.
+            </p>
+          </div>
+          <div class="row">
+            <h3 class="col-12">Editorial</h3>
+            <div class="editorial row">
+              <i class="fas fa-user col-1"></i>
+              <p class="col-11"><b>Redação:</b> João Felipe Araújo</p>
+              <i class="fas fa-user col-1"></i>
+              <p class="col-11"><b>Pesquisa:</b> João Felipe Araújo</p>
+              <i class="fas fa-user col-1"></i>
+              <p class="col-11"><b>Gerente Geral:</b> João Felipe Araújo</p>
+            </div>
+          </div>
+          <div class="row fa-3x">
+            <h3 class="col-12">redes sociais:</h3>
+            <a
+              href="https://www.facebook.com/Forbes/"
+              class="redes-sociais-icon"
+              target="_blank"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+            <a
+              href="https://twitter.com/Forbes"
+              class="redes-sociais-icon"
+              target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/Forbes/"
+              class="redes-sociais-icon"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Copyright 2020 - Disciplina de Desenvonvimento de Interfaces Web -
+        <b>ICEI PUC Minas</b>
+      </p>
+      <a href="https://pucminas.br"
+        ><img src="res/brasaopucminas.png" alt="Brasão PUC Minas"
+      /></a>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/64f8fb50f9.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="search-result.js"></script>
+  </body>
+</html>
